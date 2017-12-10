@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		F9F261A61FDD84A900DF8A00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F261A51FDD84A900DF8A00 /* AppDelegate.swift */; };
-		F9F261A81FDD84A900DF8A00 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F261A71FDD84A900DF8A00 /* ViewController.swift */; };
 		F9F261AB1FDD84A900DF8A00 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9F261A91FDD84A900DF8A00 /* Main.storyboard */; };
 		F9F261AD1FDD84A900DF8A00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9F261AC1FDD84A900DF8A00 /* Assets.xcassets */; };
 		F9F261B01FDD84A900DF8A00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9F261AE1FDD84A900DF8A00 /* LaunchScreen.storyboard */; };
 		F9F261BB1FDD84AA00DF8A00 /* ARKitDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F261BA1FDD84AA00DF8A00 /* ARKitDemoTests.swift */; };
 		F9F261C61FDD84AA00DF8A00 /* ARKitDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F261C51FDD84AA00DF8A00 /* ARKitDemoUITests.swift */; };
+		F9F261D41FDD84DF00DF8A00 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F261D31FDD84DF00DF8A00 /* ARViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +36,6 @@
 /* Begin PBXFileReference section */
 		F9F261A21FDD84A900DF8A00 /* ARKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9F261A51FDD84A900DF8A00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F9F261A71FDD84A900DF8A00 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F9F261AA1FDD84A900DF8A00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F9F261AC1FDD84A900DF8A00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F9F261AF1FDD84A900DF8A00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +46,7 @@
 		F9F261C11FDD84AA00DF8A00 /* ARKitDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARKitDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9F261C51FDD84AA00DF8A00 /* ARKitDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARKitDemoUITests.swift; sourceTree = "<group>"; };
 		F9F261C71FDD84AA00DF8A00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9F261D31FDD84DF00DF8A00 /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +97,8 @@
 		F9F261A41FDD84A900DF8A00 /* ARKitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				F9F261D31FDD84DF00DF8A00 /* ARViewController.swift */,
 				F9F261A51FDD84A900DF8A00 /* AppDelegate.swift */,
-				F9F261A71FDD84A900DF8A00 /* ViewController.swift */,
 				F9F261A91FDD84A900DF8A00 /* Main.storyboard */,
 				F9F261AC1FDD84A900DF8A00 /* Assets.xcassets */,
 				F9F261AE1FDD84A900DF8A00 /* LaunchScreen.storyboard */,
@@ -259,7 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9F261A81FDD84A900DF8A00 /* ViewController.swift in Sources */,
+				F9F261D41FDD84DF00DF8A00 /* ARViewController.swift in Sources */,
 				F9F261A61FDD84A900DF8A00 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -429,6 +429,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A6KJB7CEQ9;
 				INFOPLIST_FILE = ARKitDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sofwr.ARKitDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -444,6 +445,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A6KJB7CEQ9;
 				INFOPLIST_FILE = ARKitDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sofwr.ARKitDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
