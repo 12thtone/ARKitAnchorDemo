@@ -15,7 +15,7 @@ class ARViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         dropAnchor()
     }
     
@@ -43,19 +43,24 @@ class ARViewController: UIViewController {
         // Measurements in meters
         
         // One-sided plane that shows the image
-        let plane = SCNPlane(width: 0.5, height: 0.5)
+        let plane = SCNPlane(width: 0.4, height: 0.4)
         plane.firstMaterial!.diffuse.contents = image
         
-        // Coordinate space in view that will hold the plane
-        let node = SCNNode()
-        node.geometry = plane
+        let scene = SCNScene()
         
-        // 1 meter away from user
-        node.position = SCNVector3(0, 0, -1.0)
+        for i in -20..<20 {
+            
+            // Coordinate space in view that will hold the plane
+            let node = SCNNode()
+            node.geometry = plane
+            
+            // 1.5 meter away from user
+            node.position = SCNVector3(Double(i), 0, -1.0)
+            
+            scene.rootNode.addChildNode(node)
+        }
         
         // Set the scene to sceneKitView
-        let scene = SCNScene()
-        scene.rootNode.addChildNode(node)
         sceneKitView.scene = scene
     }
     
